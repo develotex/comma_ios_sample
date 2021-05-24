@@ -1,0 +1,32 @@
+PODS:
+  - Comma (1.0.4):
+    - GoogleWebRTC (~> 1.1)
+    - SwiftSignalRClient
+  - GoogleWebRTC (1.1.31999)
+  - SwiftSignalRClient (0.8.0)
+
+DEPENDENCIES:
+  - Comma (from `https://github.com/develotex/comma_ios.git`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GoogleWebRTC
+    - SwiftSignalRClient
+
+EXTERNAL SOURCES:
+  Comma:
+    :git: https://github.com/develotex/comma_ios.git
+
+CHECKOUT OPTIONS:
+  Comma:
+    :commit: 0eced4500b7d825fccbdb7d875dcbb9d85f5929d
+    :git: https://github.com/develotex/comma_ios.git
+
+SPEC CHECKSUMS:
+  Comma: 317c7c3b43549067dcfabd0fec38331bd7ca869f
+  GoogleWebRTC: b39a78c4f5cc6b0323415b9233db03a2faa7b0f0
+  SwiftSignalRClient: fcdfa9141dd191b5c219df87adbfc58f6f1f5554
+
+PODFILE CHECKSUM: ade8a35c646c8cfa73f12c1d6d2434fed376e556
+
+COCOAPODS: 1.10.1

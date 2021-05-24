@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hDA-Dj-FTL">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wNa-zw-SIu">
+            <objects>
+                <viewController id="6NG-aJ-vwb" customClass="ViewController" customModule="Comma_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PJa-sS-YvV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UD1-YK-fbG">
+                                <rect key="frame" x="16" y="74" width="288" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pxq-lA-VvP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exx-1j-k2b">
+                                <rect key="frame" x="16" y="302" width="288" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KzD-XQ-6f0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Video Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="videoCallButtonClicked:" destination="6NG-aJ-vwb" eventType="touchUpInside" id="CXK-sd-Vtk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-h2-kcj">
+                                <rect key="frame" x="16" y="478" width="288" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="X1W-Oc-dv8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="End Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endCallButtonClicked:" destination="6NG-aJ-vwb" eventType="touchUpInside" id="bmr-fl-X5X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j82-Kc-R5X">
+                                <rect key="frame" x="16" y="378" width="288" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ygC-dJ-tCm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Present VideoController"/>
+                                <connections>
+                                    <action selector="presentButtonClicked:" destination="6NG-aJ-vwb" eventType="touchUpInside" id="UOf-4M-kSU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jb-3Q-Tsl">
+                                <rect key="frame" x="16" y="226" width="288" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Xrv-Gu-FhJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callButtonClicked:" destination="6NG-aJ-vwb" eventType="touchUpInside" id="HqH-rw-KaY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ox-Zo-yEm">
+                                <rect key="frame" x="16" y="150" width="140" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="C07-Bc-4QB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="G0d-R5-6HH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="6NG-aJ-vwb" eventType="touchUpInside" id="t05-os-8bv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgA-Qy-eas">
+                                <rect key="frame" x="164" y="150" width="140" height="60"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="oFz-m3-VrE"/>
+                                    <constraint firstAttribute="height" constant="60" id="pdM-1s-OVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteButtonClicked:" destination="6NG-aJ-vwb" eventType="touchUpInside" id="SzV-9g-aIk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a1V-0t-voX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a1V-0t-voX" firstAttribute="trailing" secondItem="UD1-YK-fbG" secondAttribute="trailing" constant="16" id="24e-tn-MBR"/>
+                            <constraint firstItem="aRq-h2-kcj" firstAttribute="leading" secondItem="a1V-0t-voX" secondAttribute="leading" constant="16" id="AHS-l1-mao"/>
+                            <constraint firstItem="a1V-0t-voX" firstAttribute="trailing" secondItem="TgA-Qy-eas" secondAttribute="trailing" constant="16" id="Crk-oA-kpB"/>
+                            <constraint firstItem="j82-Kc-R5X" firstAttribute="leading" secondItem="a1V-0t-voX" secondAttribute="leading" constant="16" id="K1i-lw-26B"/>
+                            <constraint firstItem="a1V-0t-voX" firstAttribute="trailing" secondItem="j82-Kc-R5X" secondAttribute="trailing" constant="16" id="KfC-fW-iGC"/>
+                            <constraint firstItem="a1V-0t-voX" firstAttribute="trailing" secondItem="exx-1j-k2b" secondAttribute="trailing" constant="16" id="MXY-Wb-a9J"/>
+                            <constraint firstItem="a1V-0t-voX" firstAttribute="trailing" secondItem="0Jb-3Q-Tsl" secondAttribute="trailing" constant="16" id="Nmp-s4-7gJ"/>
+                            <constraint firstItem="0Jb-3Q-Tsl" firstAttribute="leading" secondItem="a1V-0t-voX" secondAttribute="leading" constant="16" id="PCx-ed-IqW"/>
+                            <constraint firstItem="0Jb-3Q-Tsl" firstAttribute="top" secondItem="TgA-Qy-eas" secondAttribute="bottom" constant="16" id="Ua2-dA-5qU"/>
+                            <constraint firstItem="UD1-YK-fbG" firstAttribute="leading" secondItem="a1V-0t-voX" secondAttribute="leading" constant="16" id="X2n-hR-JsS"/>
+                            <constraint firstItem="2ox-Zo-yEm" firstAttribute="top" secondItem="UD1-YK-fbG" secondAttribute="bottom" constant="16" id="YnA-yq-c7F"/>
+                            <constraint firstItem="0Jb-3Q-Tsl" firstAttribute="top" secondItem="2ox-Zo-yEm" secondAttribute="bottom" constant="16" id="d6A-hR-55l"/>
+                            <constraint firstItem="TgA-Qy-eas" firstAttribute="top" secondItem="UD1-YK-fbG" secondAttribute="bottom" constant="16" id="gA9-xB-StI"/>
+                            <constraint firstItem="a1V-0t-voX" firstAttribute="bottom" secondItem="aRq-h2-kcj" secondAttribute="bottom" constant="30" id="mlF-fo-8yq"/>
+                            <constraint firstItem="a1V-0t-voX" firstAttribute="trailing" secondItem="aRq-h2-kcj" secondAttribute="trailing" constant="16" id="qtQ-Ln-phO"/>
+                            <constraint firstItem="exx-1j-k2b" firstAttribute="leading" secondItem="a1V-0t-voX" secondAttribute="leading" constant="16" id="tD7-kL-oK3"/>
+                            <constraint firstItem="j82-Kc-R5X" firstAttribute="top" secondItem="exx-1j-k2b" secondAttribute="bottom" constant="16" id="wLk-ZH-ouN"/>
+                            <constraint firstItem="exx-1j-k2b" firstAttribute="top" secondItem="0Jb-3Q-Tsl" secondAttribute="bottom" constant="16" id="wxJ-9B-Qez"/>
+                            <constraint firstItem="UD1-YK-fbG" firstAttribute="top" secondItem="a1V-0t-voX" secondAttribute="top" constant="30" id="xBk-k4-2hy"/>
+                            <constraint firstItem="2ox-Zo-yEm" firstAttribute="leading" secondItem="a1V-0t-voX" secondAttribute="leading" constant="16" id="xZH-QT-JSJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l1W-ae-0Of">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="speaker.fill" catalog="system" id="FQU-Wk-7tf">
+                            <connections>
+                                <action selector="speakerBarButtonClicked:" destination="6NG-aJ-vwb" id="fxl-KT-B0j"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="video.fill" catalog="system" id="NeT-vD-3Hp">
+                                <connections>
+                                    <action selector="videoBarButtonClicked:" destination="6NG-aJ-vwb" id="Alk-x1-kqP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="mic.fill" catalog="system" id="DlZ-t7-xl3">
+                                <connections>
+                                    <action selector="micBarButtonClicked:" destination="6NG-aJ-vwb" id="ypQ-hr-c10"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callButton" destination="0Jb-3Q-Tsl" id="GPC-pM-T6C"/>
+                        <outlet property="deleteButton" destination="TgA-Qy-eas" id="Plh-vN-tVZ"/>
+                        <outlet property="endCallButton" destination="aRq-h2-kcj" id="Zvc-5N-u3v"/>
+                        <outlet property="loginButton" destination="2ox-Zo-yEm" id="h6F-NF-45c"/>
+                        <outlet property="micBarButton" destination="DlZ-t7-xl3" id="zAj-E3-rk7"/>
+                        <outlet property="speakerBarButton" destination="FQU-Wk-7tf" id="amr-Z9-KHa"/>
+                        <outlet property="titleLabel" destination="UD1-YK-fbG" id="NWA-Q8-t1Z"/>
+                        <outlet property="videoBarButton" destination="NeT-vD-3Hp" id="iVR-0C-D33"/>
+                        <outlet property="videoCallButton" destination="exx-1j-k2b" id="0XT-9c-3L4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAa-st-wej" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.5999999999999" y="113.79310344827587"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="20z-8q-h4F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hDA-Dj-FTL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="onA-vM-rUw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6NG-aJ-vwb" kind="relationship" relationship="rootViewController" id="psK-l7-T1n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Xd-gd-FkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic.fill" catalog="system" width="108" height="128"/>
+        <image name="speaker.fill" catalog="system" width="128" height="128"/>
+        <image name="video.fill" catalog="system" width="128" height="82"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
