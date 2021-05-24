@@ -62,6 +62,9 @@ commaManager?.configureService (
 Please note that The registration method is called after connecting to the signaling server. This method is a direct alternative to the Login method, with the only difference that Login authorizes the connection for an existing device, and Register creates a new device and automatically authorizes the connection for it. Thus, you cannot call Login after Register.
 
 
+Please call  `closeConnection()` in method  `applicationDidEnterBackground`  to properly close all connections & configure your session anew in method  `applicationDidBecomeActive` 
+
+
 ### **Callbacks**
 
 ```
@@ -96,15 +99,14 @@ receive voip push token
 ```
 func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
   if type == .voIP {
-    commaManager?.didReceiveIncomingPushWith(dictionaryPayload: payload.dictionaryPayload)
+  commaManager.didReceiveIncomingPushWith(dictionaryPayload: payload.dictionaryPayload, withCallKit: true)
   }
 }
 ```
-
+If you are using CallKit: to show the application logo on the callkit screen you need to add the image named  `AppIconForComma `.
 
 ### **Accept or Decline Incoming Call**
-
-Accept
+Accept 
 ```
   self.commaManager?.answerCall(true, type: incomingCall.callType)
 ```
@@ -137,7 +139,7 @@ commaManager?.setSpeaker(false)
 
 streaming to local and remote views during a video call
 ```
-commaService?.setupVideo(localView: <local_UIView>, remoteView: <remote_UIView>)
+commaService?.setupVideo(localView: <local_UIView>, remoteView: <remote_UIView>,cameraPosition: <camera_position>)
 ```
 
 End Call
@@ -145,6 +147,17 @@ End Call
 commaManager?.endCall()
 ```
 
+Check Connection State
+```
+commaManager?.connectionStateDidChange =  { state in
+  switch state {
+  case .checking:
+  case .connected:
+  case .failed:
+  case .disconnected:
+  }
+}
+```
 
 ## Author
 
